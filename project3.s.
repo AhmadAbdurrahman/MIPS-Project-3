@@ -112,4 +112,10 @@ bne $a2,32,removefirstConst
 bge $a0,1000,removefirstConst
 addi $a0,$a0,1   
 j firstConst    
- 
+
+endfirstConst:  
+move $v0, $t4
+jr $ra
+
+endspace:
+addi $t2, $zero, 0 
