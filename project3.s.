@@ -95,3 +95,10 @@ addi $a0, $zero, 0
 jal endspace
 move $s3, $v0 
 
+beqz $s3, invalidchars 
+bgt $s3,4 ,invalidchars 
+
+move $a0, $s1
+move $a1, $s3
+jal ConstantVal
+
