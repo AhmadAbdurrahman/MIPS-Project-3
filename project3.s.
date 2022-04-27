@@ -76,3 +76,11 @@ addi $t2, $zero, 0
 la $a0, user_string 
 addi $a3, $a3, 1
 j sub_loop
+
+end_sub_a:
+move $ra, $s6
+jr $ra
+
+sub_b:
+move $t7,$ra
+lw  $s7, 0($sp) 
