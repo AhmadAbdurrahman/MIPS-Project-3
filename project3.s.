@@ -181,3 +181,10 @@ mflo $t1
 addi $t4, $t4, 1 #increments i
 addi $s7, $s7,1 #Increments "string register"
 j loop3
+
+ifAU:
+blt $t3, 65, validchar
+sub $s4, $t3, 55 
+mult $s4, $t1
+mflo $s4
+add $s2, $s2, $s4 
