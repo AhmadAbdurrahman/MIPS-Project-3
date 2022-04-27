@@ -195,3 +195,10 @@ mflo $t1
 addi $t4, $t4, 1 
 addi $s7, $s7,1 
 j loop3
+
+ifau:
+blt $t3, 97, validchar
+sub $s4, $t3, 87 
+mult $s4, $t1
+mflo $s4
+add $s2, $s2, $s4 
