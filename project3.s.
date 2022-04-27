@@ -1,0 +1,18 @@
+# program: 1000 char string
+# N = 31
+# M = 21
+
+
+.data
+sum: .word  0 
+user_string: .space 1001 
+comma: .asciiz ","
+error_message: .asciiz "-" 
+buffer: .space 1001
+
+.text
+main:
+li $v0, 8 
+la $a0, buffer 
+li $a1, 1001
+syscall 
