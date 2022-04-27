@@ -50,3 +50,10 @@ move $t7, $ra
 addi $sp, $sp, -4 
 sw $a0, 0($sp) 
 jal sub_b
+
+lw  $t7, 0($sp)
+addi $sp, $sp, -4 #resets stack
+beq $t7, -1, invalid
+
+li $v0, 1
+move $a0,$t7
