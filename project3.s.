@@ -208,3 +208,12 @@ mflo $t1
 addi $t4, $t4, 1 
 addi $s7, $s7,1 
 j loop3
+
+invalidchars:
+move $ra, $t7
+addi $s5, $zero, -1    
+j endSub_b
+
+EndProgram:
+move $v1, $s2       
+jr $ra
