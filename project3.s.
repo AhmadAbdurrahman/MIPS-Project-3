@@ -107,4 +107,9 @@ j endSub_b
 
 firstConst:
 addu $t4,$a0,$a1 
-
+lbu $a2,0($t4)   
+bne $a2,32,removefirstConst
+bge $a0,1000,removefirstConst
+addi $a0,$a0,1   
+j firstConst    
+ 
