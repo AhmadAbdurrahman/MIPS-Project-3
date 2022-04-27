@@ -140,3 +140,10 @@ j loop
 removeendspace:  
 move $v0, $t2
 jr $ra 
+
+ConstantVal:
+move $s7,$a0
+addi $t9,$zero, 31      
+move $t8,$a1
+addi $t4,$zero, 1
+addi $t1,$zero, 1 
