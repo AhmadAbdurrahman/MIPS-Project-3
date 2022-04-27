@@ -64,3 +64,10 @@ invalid:
 li $v0,4
 la $a0, error_message 
 syscall
+
+loop2:
+bgt $a3, 1000, end_sub_a
+
+li $v0, 4
+la $a0, comma
+syscall
