@@ -84,3 +84,9 @@ jr $ra
 sub_b:
 move $t7,$ra
 lw  $s7, 0($sp) 
+
+move $a1,$s7
+addi $a0, $zero, 0
+jal firstConst
+move $s1, $v0 
+
