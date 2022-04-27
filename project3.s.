@@ -159,5 +159,12 @@ string_loop:
 addi $t4,$zero, 0
 addi $s2, $zero, 0
 loop3:
-   bge $t4, $t8, EndProgram 
-   lb $t3, ($s7) 
+bge $t4, $t8, EndProgram 
+lb $t3, ($s7) 
+ble $t3, 47, validchar 
+ble $t3, 55, if09 
+ble $t3, 87, ifAU 
+ble $t3, 117, ifau 
+
+validchar:
+addi $s2, $zero, -1
