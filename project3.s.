@@ -31,3 +31,10 @@ addi $sp, $sp, -4
 
 addi $a3, $zero, 0
 addi $t2, $zero, 0 
+la $a0, user_string
+
+sub_loop:
+add $t1, $t6, $a3 
+add $t4, $a0, $t2 
+lb $t1, ($t1)
+beq $t1, 59, go2SubB 
