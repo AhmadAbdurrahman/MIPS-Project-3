@@ -130,5 +130,13 @@ j invalid1
 
 validchars:
 addi $t2, $t2, 1
+
 invalid1:
-addi $a0,$a0,1   
+addi $a0,$a0,1  
+bgt $a0,4, removeendspace
+bgt $a0,1000, removeendspace
+j loop         
+
+removeendspace:  
+move $v0, $t2
+jr $ra 
