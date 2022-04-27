@@ -224,3 +224,12 @@ la $t2, user_string
 loopEndb:
 add $t1, $t2, $t0
 lb $t3, ($t1)
+beq $t3, 0,endB   
+sb $zero, ($t1)
+addi $t0, $t0, 1
+j loopEndb
+
+endB:
+move $ra, $t7
+sw  $s5, 0($sp) 
+jr $ra
