@@ -154,3 +154,10 @@ mult $t1,$t9
 mflo $t1
 addi $t4,$t4,1
 j calc_loop
+
+string_loop:
+addi $t4,$zero, 0
+addi $s2, $zero, 0
+loop3:
+   bge $t4, $t8, EndProgram 
+   lb $t3, ($s7) 
