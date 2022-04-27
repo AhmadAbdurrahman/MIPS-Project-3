@@ -147,3 +147,10 @@ addi $t9,$zero, 31
 move $t8,$a1
 addi $t4,$zero, 1
 addi $t1,$zero, 1 
+
+calc_loop:
+beq $t4, $t8, string_loop
+mult $t1,$t9      
+mflo $t1
+addi $t4,$t4,1
+j calc_loop
