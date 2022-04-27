@@ -57,3 +57,10 @@ beq $t7, -1, invalid
 
 li $v0, 1
 move $a0,$t7
+syscall
+j loop2
+
+invalid:
+li $v0,4
+la $a0, error_message 
+syscall
