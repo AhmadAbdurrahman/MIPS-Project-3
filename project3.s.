@@ -176,3 +176,8 @@ sub $s4, $t3, 48
 mult $s4, $t1
 mflo $s4
 add $s2, $s2, $s4
+div $t1, $t9
+mflo $t1
+addi $t4, $t4, 1 #increments i
+addi $s7, $s7,1 #Increments "string register"
+j loop3
