@@ -118,4 +118,11 @@ move $v0, $t4
 jr $ra
 
 endspace:
-addi $t2, $zero, 0 
+addi $t2, $zero, 0
+
+loop:
+addu $t4,$a0,$a1 
+lbu $a2,0($t4)   
+ble $a2, 47, invalid1 
+ble $a2, 58, validchars 
+ble $a2, 121, validchars  
