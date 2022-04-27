@@ -38,3 +38,9 @@ add $t1, $t6, $a3
 add $t4, $a0, $t2 
 lb $t1, ($t1)
 beq $t1, 59, go2SubB 
+bgt $a3, 1000, go2SubB 
+sb $t1, ($t4) 
+
+addi $a3, $a3, 1
+addi $t2, $t2, 1 
+j sub_loop
