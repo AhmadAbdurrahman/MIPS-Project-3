@@ -113,7 +113,7 @@ bge $a0,1000,removefirstConst
 addi $a0,$a0,1   
 j firstConst    
 
-endfirstConst:  
+removefirstConst:  
 move $v0, $t4
 jr $ra
 
