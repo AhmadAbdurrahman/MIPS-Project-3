@@ -23,3 +23,11 @@ jal sub_a
 
 li $v0, 10
 syscall 
+
+sub_a:
+move $s6, $ra 
+lw  $t6, 0($sp) 
+addi $sp, $sp, -4 
+
+addi $a3, $zero, 0
+addi $t2, $zero, 0 
