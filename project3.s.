@@ -44,3 +44,9 @@ sb $t1, ($t4)
 addi $a3, $a3, 1
 addi $t2, $t2, 1 
 j sub_loop
+
+go2SubB:
+move $t7, $ra
+addi $sp, $sp, -4 
+sw $a0, 0($sp) 
+jal sub_b
