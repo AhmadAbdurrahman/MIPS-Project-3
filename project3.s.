@@ -168,3 +168,11 @@ ble $t3, 117, ifau
 
 validchar:
 addi $s2, $zero, -1
+
+j EndProgram
+
+if09:
+sub $s4, $t3, 48
+mult $s4, $t1
+mflo $s4
+add $s2, $s2, $s4
